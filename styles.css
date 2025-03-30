@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+.container {
+    min-width: 375px;
+    width: 100%;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+    background-color: transparent; /* asegura que no tenga fondo */
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px; /* espacio lateral opcional para evitar que el logo toque los bordes */
+}
+
+.logo {
+    width: 70%;
+    max-width: 700px; /* para que no se haga gigante en pantallas grandes */
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.welcome-text {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #232233;
+    text-align: center;
+}
+
+/* Working Section Styles */
+.working-section {
+    width: 100%;
+    background-color: #5956e9;
+    padding: 20px 16px;
+}
+
+.content-wrapper {
+    max-width: 343px;
+    margin: 0 auto;
+}
+
+.text-container {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 37.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.title-centered {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.app-screen {
+    width: 100vw; /* 100% del viewport */
+    margin-left: calc(-50vw + 50%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.app-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 375px) {
+    .container {
+        width: 375px;
+    }
+    
+    .working-section {
+        padding: 15px;
+    }
+}
+
+/* Experience Section Styles */
+.experience-section {
+    min-width: 338px;
+    padding: 12px;
+    font-family: 'Rethink Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.description-centered {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    color: #6c6c72;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 20px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 338px;
+}
+
+.grid-item {
+    width: 96px;
+    min-height: 100px;
+    background-color: #5956e9;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    box-shadow: none;
+    padding: 10px 8px; /* más margen horizontal */
+    text-align: center;
+}
+
+.grid-item span {
+    color: white;
+    font-size: 11px;               /* más pequeño */
+    font-weight: 600;
+    text-align: center;
+    line-height: 14px;
+    text-transform: uppercase;
+    padding: 4px;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+.grid-item.small-text span {
+    font-size: 11px;
+    line-height: 13px;
+    padding: 4px;
+}
+
+
+.grid-item:hover {
+    transform: none; /* quitar efecto hover */
+}
+
+.grid-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.grid-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.only-icon .grid-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.grid-item span {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+
+.cta-button {
+    background-color: #5956e9;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #4745c1;
+}
+
+@media (max-width: 400px) {
+    .experience-section {
+        padding: 8px;
+    }
+
+    .grid-container {
+        gap: 10px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Animation Section Styles */
+.animation-section {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.rectangle-15 {
+    width: 100%;
+    background-color: #635fe5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.video-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-image {
+    width: 80%;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.video-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+}
+
+.ellipse-17 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+}
+
+.ellipse-16 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.ellipse-15 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    z-index: 1;
+}
+
+/* Hover effects */
+.video-icon:hover {
+    cursor: pointer;
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.video-icon:hover .ellipse-17,
+.video-icon:hover .ellipse-16,
+.video-icon:hover .ellipse-15 {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    min-width: 320px;
+    overflow: hidden;
+    background-color: #232233;
+}
+
+.background-top {
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    height: 183px;
+    background-image: url('https://dashboard.codeparrot.ai/api/image/Z-lW2gz4-w8v6RnO/rectangl.png');
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-section {
+    width: 100%;
+    height: 167px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.contact-background {
+    position: absolute;
+    width: 100%;
+    height: 154px;
+    background-image: url('https://dashboard.codeparrot.ai/api/image/Z-lW2gz4-w8v6RnO/backgrou.png');
+    background-size: cover;
+}
+
+.email-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.email-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 13px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #5956E9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.email-text {
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #232233;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+.dark-background {
+    width: 100%;
+    height: auto;
+    background-color: #232233;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    width: 200px;
+    height: 48px;
+}
+
+
